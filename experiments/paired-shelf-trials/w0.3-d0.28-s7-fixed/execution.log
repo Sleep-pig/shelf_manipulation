@@ -1,0 +1,16 @@
+TRIAL_RESULT {"strategy": "fixed", "success": false, "stage": "approach", "grasped": false, "attempts": 1, "planning_s": 0.2901131929993426, "rejections": [], "error": "Incomplete Cartesian path: 0.435"}
+Traceback (most recent call last):
+  File "/home/pjie/workspace/shelf_manipulation/install/shelf_scene/lib/shelf_scene/fixed_grasp", line 33, in <module>
+    sys.exit(load_entry_point('shelf-scene==0.1.0', 'console_scripts', 'fixed_grasp')())
+  File "/home/pjie/workspace/shelf_manipulation/install/shelf_scene/lib/python3.10/site-packages/shelf_scene/fixed_grasp.py", line 368, in main
+    node.run()
+  File "/home/pjie/workspace/shelf_manipulation/install/shelf_scene/lib/python3.10/site-packages/shelf_scene/fixed_grasp.py", line 256, in run
+    self.pick_place()
+  File "/home/pjie/workspace/shelf_manipulation/install/shelf_scene/lib/python3.10/site-packages/shelf_scene/fixed_grasp.py", line 280, in pick_place
+    self.straight(self.hand_pose(target, .108))
+  File "/home/pjie/workspace/shelf_manipulation/install/shelf_scene/lib/python3.10/site-packages/shelf_scene/fixed_grasp.py", line 149, in straight
+    self.execute(self.cartesian(pose))
+  File "/home/pjie/workspace/shelf_manipulation/install/shelf_scene/lib/python3.10/site-packages/shelf_scene/fixed_grasp.py", line 145, in cartesian
+    raise RuntimeError(f"Incomplete Cartesian path: {answer.fraction:.3f}")
+RuntimeError: Incomplete Cartesian path: 0.435
+[ros2run]: Process exited with failure 1

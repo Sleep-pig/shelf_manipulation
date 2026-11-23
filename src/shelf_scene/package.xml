@@ -7,5 +7,29 @@
   <exec_depend>rclpy</exec_depend><exec_depend>moveit_msgs</exec_depend>
   <exec_depend>visualization_msgs</exec_depend><exec_depend>geometry_msgs</exec_depend>
   <exec_depend>shape_msgs</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>moveit_resources_panda_description</exec_depend>
+  <exec_depend>moveit_resources_panda_moveit_config</exec_depend>
+  <exec_depend>franka_description</exec_depend>
+  <exec_depend>gazebo_ros2_control</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>gripper_controllers</exec_depend>
+  <exec_depend>moveit_ros_move_group</exec_depend>
+  <exec_depend>moveit_planners_ompl</exec_depend>
+  <exec_depend>moveit_simple_controller_manager</exec_depend>
+  <exec_depend>moveit_kinematics</exec_depend>
+  <exec_depend>gazebo_msgs</exec_depend>
+  <exec_depend>action_msgs</exec_depend>
+  <exec_depend>ros2bag</exec_depend>
+  <exec_depend>rosbag2_storage_default_plugins</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>shelf_grasp_plugin</exec_depend>
+  <exec_depend>shelf_planning</exec_depend>
   <export><build_type>ament_python</build_type></export>
 </package>

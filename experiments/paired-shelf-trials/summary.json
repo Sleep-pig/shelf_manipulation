@@ -1,0 +1,134 @@
+[
+  {
+    "width": 0.3,
+    "depth": 0.28,
+    "strategy": "fixed",
+    "trials": 2,
+    "success_rate": 0.0,
+    "verified_grasps": 0,
+    "withdraw_failure_rate": null,
+    "planning_p95_s": 0.2901131929993426,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.3,
+    "depth": 0.28,
+    "strategy": "multi",
+    "trials": 2,
+    "success_rate": 0.0,
+    "verified_grasps": 0,
+    "withdraw_failure_rate": null,
+    "planning_p95_s": 7.01978538899948,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.3,
+    "depth": 0.28,
+    "strategy": "precheck",
+    "trials": 2,
+    "success_rate": 0.0,
+    "verified_grasps": 0,
+    "withdraw_failure_rate": null,
+    "planning_p95_s": 6.859824644001037,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.3,
+    "depth": 0.32,
+    "strategy": "fixed",
+    "trials": 2,
+    "success_rate": 0.0,
+    "verified_grasps": 0,
+    "withdraw_failure_rate": null,
+    "planning_p95_s": 0.5873347930005366,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.3,
+    "depth": 0.32,
+    "strategy": "multi",
+    "trials": 2,
+    "success_rate": 0.0,
+    "verified_grasps": 0,
+    "withdraw_failure_rate": null,
+    "planning_p95_s": 12.656758206000177,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.3,
+    "depth": 0.32,
+    "strategy": "precheck",
+    "trials": 2,
+    "success_rate": 0.0,
+    "verified_grasps": 0,
+    "withdraw_failure_rate": null,
+    "planning_p95_s": 12.410867815000529,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.36,
+    "depth": 0.28,
+    "strategy": "fixed",
+    "trials": 2,
+    "success_rate": 0.5,
+    "verified_grasps": 1,
+    "withdraw_failure_rate": 0.0,
+    "planning_p95_s": 0.8283230289994208,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.36,
+    "depth": 0.28,
+    "strategy": "multi",
+    "trials": 2,
+    "success_rate": 1.0,
+    "verified_grasps": 2,
+    "withdraw_failure_rate": 0.0,
+    "planning_p95_s": 7.0532580769981905,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.36,
+    "depth": 0.28,
+    "strategy": "precheck",
+    "trials": 2,
+    "success_rate": 0.5,
+    "verified_grasps": 1,
+    "withdraw_failure_rate": 0.0,
+    "planning_p95_s": 6.601859254999454,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.36,
+    "depth": 0.32,
+    "strategy": "fixed",
+    "trials": 2,
+    "success_rate": 0.5,
+    "verified_grasps": 1,
+    "withdraw_failure_rate": 0.0,
+    "planning_p95_s": 1.45964763100028,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.36,
+    "depth": 0.32,
+    "strategy": "multi",
+    "trials": 2,
+    "success_rate": 0.5,
+    "verified_grasps": 1,
+    "withdraw_failure_rate": 0.0,
+    "planning_p95_s": 12.48669017299926,
+    "timed_trials": 2
+  },
+  {
+    "width": 0.36,
+    "depth": 0.32,
+    "strategy": "precheck",
+    "trials": 2,
+    "success_rate": 0.5,
+    "verified_grasps": 1,
+    "withdraw_failure_rate": 0.0,
+    "planning_p95_s": 12.405200920998595,
+    "timed_trials": 2
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "output": "/home/pjie/workspace/shelf_manipulation/log/shelf-study-1795445747",
+  "seeds": [
+    7,
+    8
+  ],
+  "widths": [
+    0.3,
+    0.36
+  ],
+  "depths": [
+    0.28,
+    0.32
+  ],
+  "timeout": 120.0,
+  "domain": 96,
+  "strategies": [
+    "fixed",
+    "multi",
+    "precheck"
+  ]
+}

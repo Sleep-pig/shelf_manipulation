@@ -1,0 +1,8 @@
+moveit_msgs/PlanningScene scene
+moveit_msgs/RobotState start
+trajectory_msgs/JointTrajectory approach
+geometry_msgs/Pose[] loaded_waypoints
+---
+bool valid
+string reason
+float64 clearance

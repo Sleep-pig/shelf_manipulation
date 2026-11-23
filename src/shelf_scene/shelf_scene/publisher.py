@@ -1,35 +1,22 @@
 import math
-import random
 
 import rclpy
 from geometry_msgs.msg import Pose
 from moveit_msgs.msg import CollisionObject, PlanningScene
+from moveit_msgs.srv import ApplyPlanningScene
 from rclpy.qos import DurabilityPolicy, QoSProfile
 from shape_msgs.msg import SolidPrimitive
 from visualization_msgs.msg import Marker, MarkerArray
 
 
-def layout(seed):
-    rng = random.Random(seed)
-    return [
-        ("floor", (.32, .40, .02), (.53, 0., .20), 0.),
-        ("ceiling", (.32, .40, .02), (.53, 0., .48), 0.),
-        ("left", (.32, .02, .26), (.53, .19, .34), 0.),
-        ("right", (.32, .02, .26), (.53, -.19, .34), 0.),
-        ("back", (.02, .36, .26), (.68, 0., .34), 0.),
-        ("target", (.07, .04, .06),
-         (rng.uniform(.44, .59), rng.uniform(-.07, .03), .24),
-         rng.uniform(-.6, .6)),
-        ("obstacle", (.08, .05, .12), (.49, .13, .27), 0.),
-        ("tray", (.20, .18, .02), (.32, -.34, .15), 0.),
-    ]
+from .layout import layout
 
 
-def messages(seed):
+def messages(seed, width=.36, depth=.32):
     scene = PlanningScene(is_diff=True)
     scene.robot_state.is_diff = True
     markers = MarkerArray()
-    for index, (name, size, center, yaw) in enumerate(layout(seed)):
+    for index, (name, size, center, yaw) in enumerate(layout(seed, width, depth)):
         pose = Pose()
         pose.position.x, pose.position.y, pose.position.z = center
         pose.orientation.z = math.sin(yaw / 2)
@@ -54,13 +41,26 @@ def main():
     node = rclpy.create_node("shelf_scene")
     try:
         seed = node.declare_parameter("seed", 0).value
-        scene, markers = messages(seed)
+        width = node.declare_parameter("width", .36).value
+        depth = node.declare_parameter("depth", .32).value
+        scene, markers = messages(seed, width, depth)
         qos = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
         scene_pub = node.create_publisher(PlanningScene, "planning_scene", qos)
         marker_pub = node.create_publisher(MarkerArray, "shelf/markers", qos)
         scene_pub.publish(scene)
         marker_pub.publish(markers)
         node.get_logger().info(f"Published {len(markers.markers)} boxes, seed={seed}")
+        if node.declare_parameter("apply_to_move_group", False).value:
+            client = node.create_client(ApplyPlanningScene, "apply_planning_scene")
+            while rclpy.ok() and not client.wait_for_service(timeout_sec=1.0):
+                pass
+            if not rclpy.ok():
+                return
+            request = client.call_async(ApplyPlanningScene.Request(scene=scene))
+            rclpy.spin_until_future_complete(node, request)
+            if not request.result().success:
+                raise RuntimeError("MoveIt rejected the shelf scene")
+            node.get_logger().info("Shelf geometry applied to MoveIt")
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
