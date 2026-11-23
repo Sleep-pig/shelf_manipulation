@@ -1,0 +1,11 @@
+<package format="3">
+  <name>shelf_scene</name><version>0.1.0</version>
+  <description>Repeatable shelf manipulation planning scenes</description>
+  <maintainer email="maintainer@example.org">Shelf manipulation contributors</maintainer>
+  <license>Proprietary</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend><exec_depend>moveit_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend><exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>shape_msgs</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>
