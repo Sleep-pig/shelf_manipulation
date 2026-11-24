@@ -3,12 +3,22 @@
   <description>Repeatable shelf manipulation planning scenes</description>
   <maintainer email="maintainer@example.org">Shelf manipulation contributors</maintainer>
   <license>Proprietary</license>
-  <buildtool_depend>ament_python</buildtool_depend>
-  <exec_depend>rclpy</exec_depend><exec_depend>moveit_msgs</exec_depend>
-  <exec_depend>visualization_msgs</exec_depend><exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>shape_msgs</exec_depend>
-  <exec_depend>ament_index_python</exec_depend>
-  <exec_depend>python3-yaml</exec_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ament_index_cpp</depend>
+  <depend>control_msgs</depend>
+  <depend>gazebo_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>moveit_msgs</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>sensor_msgs</depend>
+  <depend>shape_msgs</depend>
+  <depend>shelf_planning</depend>
+  <depend>tinyxml2</depend>
+  <depend>visualization_msgs</depend>
+  <depend>yaml-cpp</depend>
+  <build_depend>nlohmann-json-dev</build_depend>
   <exec_depend>moveit_resources_panda_description</exec_depend>
   <exec_depend>moveit_resources_panda_moveit_config</exec_depend>
   <exec_depend>franka_description</exec_depend>
@@ -17,6 +27,7 @@
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>launch_ros</exec_depend>
+  <exec_depend>launch_xml</exec_depend>
   <exec_depend>joint_trajectory_controller</exec_depend>
   <exec_depend>joint_state_broadcaster</exec_depend>
   <exec_depend>gripper_controllers</exec_depend>
@@ -24,12 +35,10 @@
   <exec_depend>moveit_planners_ompl</exec_depend>
   <exec_depend>moveit_simple_controller_manager</exec_depend>
   <exec_depend>moveit_kinematics</exec_depend>
-  <exec_depend>gazebo_msgs</exec_depend>
-  <exec_depend>action_msgs</exec_depend>
   <exec_depend>ros2bag</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>ros2run</exec_depend>
   <exec_depend>rosbag2_storage_default_plugins</exec_depend>
-  <exec_depend>control_msgs</exec_depend>
   <exec_depend>shelf_grasp_plugin</exec_depend>
-  <exec_depend>shelf_planning</exec_depend>
-  <export><build_type>ament_python</build_type></export>
+  <export><build_type>ament_cmake</build_type></export>
 </package>

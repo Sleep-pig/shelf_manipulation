@@ -1,0 +1,10 @@
+<launch>
+  <arg name="seed" default="7"/>
+  <arg name="width" default="0.36"/>
+  <arg name="depth" default="0.32"/>
+  <executable
+    cmd="$(find-pkg-prefix shelf_scene)/lib/shelf_scene/baseline --seed $(var seed) --width $(var width) --depth $(var depth)"
+    name="shelf_baseline"
+    output="screen"
+    on_exit="shutdown"/>
+</launch>
